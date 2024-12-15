@@ -1,0 +1,377 @@
+<link rel="icon" type="image/png" href="./images/ks.jpeg" sizes="16x16">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@unsterblich</title>
+    <style>
+        body {
+            background-color: rgb(0, 0, 0);
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .text {
+            position: absolute;
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+            white-space: nowrap;
+            text-shadow: 0 0 10px rgb(0, 0, 0), 0 0 15px rgb(0, 0, 0), 0 0 20px rgb(255, 255, 255), 0 0 25px rgb(255, 255, 255), 0 0 30px rgb(255, 255, 255), 0 0 35px rgb(0, 0, 0), 0 0 40px rgb(0, 0, 0);
+        }
+        .button-container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+        .button-container a {
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .button-container img {
+            width: 199px;
+            height: auto;
+            margin: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            filter: drop-shadow(0 4px 6px rgba(255, 255, 255, 0.664));
+        }
+        .button-container img:hover {
+            transform: translateY(-5px);
+        }
+        .button-container p {
+            color: #000000;
+            font-size: 25px;
+            font-weight: bold;
+            text-shadow: 0px 0px 3px #ffffff, 0px 0px 5px #ffffff, 0px 0px 7px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff, 0px 0px 20px #ffffff;
+            transition: transform 0.3s ease-in-out;
+        }
+        .button-container p:hover {
+            transform: translateY(-10px);
+            color: #000000;
+        }
+
+    </style>
+</head>
+<body>
+
+    <script>
+        const texts = [
+        "discord.gg/unsterblich",
+        "Configuring development environment...",
+        "Cloning repository...",
+        "Installing dependencies...",
+        "Running unit tests...",
+        "Debugging code...",
+        "Refactoring functions...",
+        "Implementing new features...",
+        "Optimizing performance...",
+        "Resolving merge conflicts...",
+        "Updating documentation...",
+        "Deploying to staging...",
+        "Running integration tests...",
+        "Fixing critical bugs...",
+        "Committing changes...",
+        "Pushing to remote repository...",
+        "Reviewing pull requests...",
+        "Merging branches...",
+        "Creating release build...",
+        "Deploying to production...",
+        "Monitoring server logs...",
+        "Scaling infrastructure...",
+        "Applying security patches...",
+        "Running end-to-end tests...",
+        "Improving code coverage...",
+        "Containerizing application...",
+        "Setting up CI/CD pipeline...",
+        "Analyzing application metrics...",
+        "Configuring load balancer...",
+        "Writing unit tests...",
+        "Implementing authentication...",
+        "Integrating third-party APIs...",
+        "Managing database migrations...",
+        "Implementing caching strategies...",
+        "Updating package dependencies...",
+        "Configuring environment variables...",
+        "Handling exceptions...",
+        "Writing API documentation...",
+        "Creating mock data...",
+        "Optimizing database queries...",
+        "Configuring web server...",
+        "Setting up monitoring tools...",
+        "Implementing feature toggles...",
+        "Automating deployment scripts...",
+        "Managing secrets securely...",
+        "Setting up automated backups...",
+        "Handling data validation...",
+        "Implementing data encryption...",
+        "Creating test cases...",
+        "Configuring network settings...",
+        "Writing shell scripts...",
+        "Managing state in application...",
+        "Implementing responsive design...",
+        "Conducting code reviews...",
+        "Tracking project milestones...",
+        "Managing user sessions...",
+        "Creating RESTful APIs...",
+        "Implementing microservices architecture...",
+        "Setting up cron jobs...",
+        "Writing SQL queries...",
+        "Designing application architecture...",
+        "Implementing search functionality...",
+        "Optimizing frontend performance...",
+        "Managing dependencies with package manager...",
+        "Implementing logging mechanisms...",
+        "Configuring domain and DNS...",
+        "Handling asynchronous tasks...",
+        "Writing migration scripts...",
+        "Managing API rate limits...",
+        "Setting up service workers...",
+        "Implementing data persistence...",
+        "Writing middleware...",
+        "Managing web sockets...",
+        "Integrating payment gateways...",
+        "Implementing authorization mechanisms...",
+        "Conducting load testing...",
+        "Analyzing performance bottlenecks...",
+        "Creating CI/CD pipelines...",
+        "Deploying serverless functions...",
+        "Handling file uploads...",
+        "Managing content delivery network (CDN)...",
+        "Writing configuration files...",
+        "Automating infrastructure provisioning...",
+        "Handling user input validation...",
+        "Creating custom hooks...",
+        "Configuring build tools...",
+        "Managing environment configurations...",
+        "Handling dependency injection...",
+        "Implementing unit testing frameworks...",
+        "Setting up local development server...",
+        "Handling version control branching...",
+        "Creating reusable components...",
+        "Optimizing image assets...",
+        "Implementing dark mode...",
+        "Configuring static site generators...",
+        "Setting up API gateways...",
+        "Managing configuration management tools...",
+        "Implementing observability solutions...",
+        "Creating database indexes...",
+        "Managing cloud resources...",
+        "Handling request throttling...",
+        "Writing build scripts...",
+        "Configuring cross-origin resource sharing (CORS)...",
+        "Implementing real-time notifications...",
+        "Managing microservices communication...",
+        "Creating design systems...",
+        "Integrating with machine learning models...",
+        "Implementing continuous integration...",
+        "Writing test-driven development (TDD) tests...",
+        "Handling network security...",
+        "Creating progressive web apps (PWAs)...",
+        "Managing application secrets...",
+        "Handling data migration...",
+        "Creating automated testing suites...",
+        "Optimizing application boot time...",
+        "Implementing service discovery...",
+        "Managing application state with Redux...",
+        "Handling session management...",
+        "Creating graphQL APIs...",
+        "Implementing server-side rendering...",
+        "Managing distributed systems...",
+        "Handling distributed tracing...",
+        "Creating user interface animations...",
+        "Managing API documentation with Swagger...",
+        "Implementing OAuth2 authentication...",
+        "Handling multi-threading...",
+        "Optimizing database indexing...",
+        "Managing SSL/TLS certificates...",
+        "Creating Docker containers...",
+        "Implementing custom error pages...",
+        "Handling large file uploads...",
+        "Managing database connections...",
+        "Setting up virtual environments...",
+        "Creating CI/CD workflows...",
+        "Implementing socket.io for real-time communication...",
+        "Managing cloud functions...",
+        "Handling websocket connections...",
+        "Creating serverless architecture...",
+        "Implementing JWT authentication...",
+        "Managing pub/sub messaging systems...",
+        "Creating custom directives...",
+        "Setting up server-side analytics...",
+        "Handling cloud storage integration...",
+        "Implementing background jobs...",
+        "Managing API versioning...",
+        "Creating reusable libraries...",
+        "Setting up automated security testing...",
+        "Handling mobile responsiveness...",
+        "Implementing progressive enhancement...",
+        "Managing monorepo architecture...",
+        "Creating dynamic routing...",
+        "Handling third-party service integration...",
+        "Implementing form validation...",
+        "Managing application telemetry...",
+        "Creating SSR-friendly components...",
+        "Handling CORS issues...",
+        "Implementing webhooks...",
+        "Managing time zone handling...",
+        "Creating custom middleware...",
+        "Handling distributed caching...",
+        "Implementing cloud-native solutions...",
+        "Managing SSL termination...",
+        "Creating feature branches...",
+        "Handling API rate limiting...",
+        "Implementing linting and formatting...",
+        "Managing schema migrations...",
+        "Creating cloud-based CI/CD pipelines...",
+        "Handling concurrency issues...",
+        "Implementing singleton pattern...",
+        "Managing configuration drift...",
+        "Creating modular codebase...",
+        "Handling resource optimization...",
+        "Implementing service mesh...",
+        "Managing zero-downtime deployments...",
+        "Creating feature flags...",
+        "Handling application rollbacks...",
+        "Implementing micro-frontend architecture...",
+        "Managing distributed databases...",
+        "Creating performance benchmarks...",
+        "Handling event sourcing...",
+        "Implementing Circuit Breaker pattern...",
+        "Managing distributed locks...",
+        "Creating business logic in backend...",
+        "Handling polyglot persistence...",
+        "Implementing domain-driven design...",
+        "Managing application metadata...",
+        "Creating domain-specific languages...",
+        "Handling database sharding...",
+        "Implementing request validation...",
+        "Managing automated code reviews...",
+        "Creating application blueprints...",
+        "Handling API gateway patterns...",
+        "Implementing decorator pattern...",
+        "Managing release versions...",
+        "Creating A/B testing frameworks...",
+        "Handling database replication...",
+        "Implementing security best practices...",
+        "Managing cloud-native deployments...",
+        "Creating distributed event logs...",
+        "Handling application telemetry...",
+        "Implementing token-based authentication...",
+        "Managing distributed transactions...",
+        "Creating shared libraries...",
+        "Handling database failover...",
+        "Implementing event-driven architecture...",
+        "Managing application scalability...",
+        "Creating resilient applications...",
+        "Handling fault tolerance...",
+        "Implementing API gateways...",
+        "Managing cloud infrastructure...",
+        "Creating highly available systems...",
+        "Handling graceful degradation...",
+        "Implementing service orchestration...",
+        "Managing cloud-based storage...",
+        "Creating domain event patterns...",
+        "Handling data synchronization...",
+        "Implementing logging strategies...",
+        "Managing cloud security...",
+        "Creating immutable infrastructure...",
+        "Handling service versioning...",
+        "Implementing service-to-service authentication...",
+        "Managing cloud-native networking...",
+        "Creating dynamic scaling strategies...",
+        "Handling cloud cost optimization...",
+        "Implementing health check endpoints...",
+        "Managing cloud-based databases...",
+        "Creating self-healing systems...",
+        "Handling cloud-native observability...",
+        "Implementing cloud-native CI/CD...",
+        "Managing serverless deployments...",
+        "Creating distributed tracing...",
+        "Handling cloud-native resilience...",
+        "Implementing fault injection testing...",
+        "Managing service-to-service communication...",
+        "Creating cloud-native logging...",
+        "Handling distributed configuration...",
+        "Implementing event sourcing...",
+        "Managing cloud-native telemetry...",
+        "Creating containerized applications...",
+        "Handling cloud-native load balancing...",
+        "Implementing security policies...",
+        "Managing service discovery...",
+        "Creating cloud-native metrics...",
+        "Handling service-to-service security...",
+        "Implementing cloud-native monitoring...",
+        "Managing cloud-native networking...",
+        "Creating distributed state management...",
+        "Handling multi-cloud deployments...",
+        "Implementing cloud-native service mesh...",
+        "Managing serverless CI/CD pipelines...",
+        "Creating cloud-native API gateways...",
+        "Handling cloud-native state management...",
+        "Implementing serverless security...",
+        "Managing cloud-native observability...",
+        "Creating cloud-native container security...",
+        "Handling cloud-native fault tolerance...",
+        "Implementing cloud-native networking security...",
+        "Managing cloud-native deployments...",
+        "Creating cloud-native service-to-service communication...",
+        "Handling cloud-native service orchestration...",
+        "Implementing cloud-native health checks...",
+        "Managing cloud-native stateful applications...",
+        "Creating cloud-native serverless functions...",
+        "Handling cloud-native distributed tracing...",
+        "Implementing cloud-native application security...",
+        "Managing cloud-native service discovery...",
+        "Creating cloud-native distributed state management...",
+        "Handling cloud-native multi-cluster deployments...",
+        "Implementing cloud-native networking policies...",
+        "Managing cloud-native CI/CD pipelines...",
+        "Initializing project setup..."
+        ];
+        function createText() {
+            const text = document.createElement('div');
+            text.classList.add('text');
+            text.textContent = texts[Math.floor(Math.random() * texts.length)];
+            text.style.left = Math.random() * window.innerWidth + 'px';
+            document.body.appendChild(text);
+            const duration = Math.random() * 6 + 3;
+            const speed = Math.random() * 100 + 50;
+            setTimeout(() => {
+                text.remove();
+            }, duration * 500);
+            moveText(text, speed);
+        }
+        function moveText(text, speed) {
+            const startTime = Date.now();
+            function animate() {
+                const timePassed = Date.now() - startTime;
+                const distance = speed * timePassed / 1000;
+                text.style.top = distance + 'px';
+                if (text.getBoundingClientRect().top > window.innerHeight) {
+                    text.remove();
+                    return;
+                }
+                requestAnimationFrame(animate);
+            }
+            requestAnimationFrame(animate);
+        }
+        setInterval(createText, 500);
+    </script>
+
+<div class="button-container">
+  <a href="./software/index.html" target="_blank">
+    <img src="./images/ks.jpeg" alt="">
+    <p>kaanseas</p>
+  </a>
+
+<div class="button-container">
+    <a href="./god/index.html" target="_blank">
+      <img src="./images/rdd.jpeg" alt="">
+      <p>rudxness</p>
+    </a>
+</body>
+</html>
